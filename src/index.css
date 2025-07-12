@@ -1,12 +1,53 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: "ArcaneFont"; /* You can name it anything */
+    font-family: "ArcaneFont";
     src: url("./assets/fonts/Hypebuzz.ttf") format("truetype");
-    /* font-weight: normal;  */
-    /* font-style: normal; */
 }
 
-.custom-font {
-  font-family: ArcaneFont;
+@font-face {
+    font-family: "DmSans";
+    src: url("./assets/fonts/DmSans.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url("./assets/fonts/Comfortaa.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("./assets/fonts/Raleway.ttf") format("truetype");
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-bg-light: #d9d9d9;
+    --color-bg-dark: #2a2c39;
+
+    --color-text-light: #111111;
+    --color-text-dark: #ffffff;
+
+    --color-btn-gradient-start: #3965c8;
+    --color-btn-gradient-end: #4dc5f7;
+
+    --color-border-gradient-start: #d9d9d9;
+    --color-border-gradient-end: #4dc5f7;
+
+    --color-footer-gradient-start: #3965c8;
+    --color-footer-gradient-end: #4dc5f7;
+
+    --text-link: 16px;
+    --text-body: 18px;
+    --text-logo: 30px;
+    --text-heading: 64px;
+    --text-h2: 44px;
+    --text-h3: 25px;
+    --text-btn: 22px;
+
+    --font-arcane: ArcaneFont;
+    --font-dm-sans: DmSans;
+    --font-comfortaa: Comfortaa;
+    --font-raleway: Raleway;
 }

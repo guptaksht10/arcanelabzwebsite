@@ -1,17 +1,15 @@
-import React from "react";
-import logo from "../assets/image.png";
-// import "../assets/fonts/HyperbuzzDemo.otf";
+import logo from "@/assets/images/image.png";
 
 export default function ComingSoon() {
     return (
-        <div className="min-h-screen bg-white text-black flex items-center justify-center px-6 font-sans">
+        <div className="min-h-screen bg-white dark:bg-dark-primary text-black flex items-center justify-center px-6 font-sans">
             <div className="text-center max-w-xl">
                 <img
                     src={logo}
                     alt="ArcaneLabz Logo"
-                    className="w-28 h-28 mx-auto mb-6"
+                    className="w-28 h-28 mx-auto mb-6 text-amber-50"
                 />
-                <h1 className="text-5xl mb-4 tracking-normal custom-font">
+                <h1 className="text-5xl mb-4 p-text-padding tracking-normal custom-font text-primary-text">
                     Arcane Labz
                 </h1>
                 <p className="text-xl mb-8">
@@ -23,7 +21,7 @@ export default function ComingSoon() {
                     <input
                         type="email"
                         placeholder="Enter your email"
-                        className="px-4 py-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full sm:w-auto"
+                        className="px-4 py-2 rounded-md bg-white border border-black focus:outline-none focus:ring-2 focus:ring-purple-500 w-full sm:w-auto"
                     />
                     <button
                         type="submit"
