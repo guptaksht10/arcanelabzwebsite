@@ -1,13 +1,6 @@
-import nodemailer from 'nodemailer'
+import nodemailer from 'nodemailer';
 
-console.log("TEST - USER:", !!process.env.GMAIL_USER);
-console.log("TEST - PASS:", !!process.env.GMAIL_PASS);
-
-export default async function handler(req, res) {
-    if (req.method !== 'POST') {
-        return res.status(405).json({ message: 'Method not allowed' });
-    }
-
+const contactHandler = async (req, res) => {
     const { name, email, phone, service, message } = req.body;
 
     if (!name || !email || !phone || !service || !message) {
@@ -29,8 +22,6 @@ export default async function handler(req, res) {
     }
 
     try {
-
-        //Configure transporter with Gmail
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -39,10 +30,12 @@ export default async function handler(req, res) {
             }
         });
         await transporter.sendMail(mailOptions);
+        console.log(`✅ Email sent successfully to ${process.env.EMAIL_USER}!`);
         return res.status(200).json({ message: "Email sent successfully" });
     } catch (error) {
         console.error("❌ Email sending failed:", error);
         return res.status(500).json({ message: "Email sending Failed", error: error.toString() });
     }
+};
 
-} 
+export default contactHandler; 
