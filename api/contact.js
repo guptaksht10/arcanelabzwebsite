@@ -8,29 +8,30 @@ const contactHandler = async (req, res) => {
     }
 
     const mailOptions = {
-        from: email,
-        to: process.env.EMAIL_USER,
+        from: process.env.GMAIL_USER,
+        to: process.env.GMAIL_USER,
+        replyTo: email,
         subject: `New Inquiry for: ${service}`,
         html: `
             <h2>New Contact Form Submission</h2>
-            <p><strong>Name:<strong/> ${name}</p>
-            <p><strong>Email:<strong/> ${email}</p>
-            <p><strong>Phone:<strong/> ${phone}</p>
-            <p><strong>Service:<strong/> ${service}</p>
-            <p><strong>Message:<strong/> ${message}</p>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone}</p>
+            <p><strong>Service:</strong> ${service}</p>
+            <p><strong>Message:</strong> ${message}</p>
         `
     }
 
     try {
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            service: "gmail",
             auth: {
-                user: process.env.EMAIL_USER,
+                user: process.env.GMAIL_USER,
                 pass: process.env.GMAIL_PASS,
-            }
-        });
+            },
+        })
         await transporter.sendMail(mailOptions);
-        console.log(`✅ Email sent successfully to ${process.env.EMAIL_USER}!`);
+        console.log(`✅ Email sent successfully to ${process.env.GMAIL_USER}!`);
         return res.status(200).json({ message: "Email sent successfully" });
     } catch (error) {
         console.error("❌ Email sending failed:", error);
