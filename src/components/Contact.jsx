@@ -79,7 +79,7 @@ export default function Contact() {
                             name="service"
                             value={form.service}
                             onChange={handleChange}
-                            className="w-full p-4 rounded-xl font-dm-sans text-link border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 text-bg-light"
+                            className="w-full p-4 rounded-xl font-dm-sans text-link border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                             required
                         >
                             <option value="" className="">
