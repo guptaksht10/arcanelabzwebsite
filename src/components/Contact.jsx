@@ -1,6 +1,44 @@
 import { MdEmail, MdPhone } from "react-icons/md";
+import { servicesData } from "../constants";
+import { useState } from "react";
 
 export default function Contact() {
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+    });
+
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const res = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(form),
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+            setForm({
+                name: "",
+                email: "",
+                phone: "",
+                service: "",
+                message: "",
+            });
+        } else {
+            console.log(data.message || "Failed to send message");
+        }
+    };
+
     return (
         <section id="contact" className="max-w-7xl mx-auto px-4 py-20">
             <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -9,28 +47,58 @@ export default function Contact() {
                     <h2 className="text-h2 font-semibold font-dm-sans mb-6">
                         Contact Us
                     </h2>
-                    <form className="space-y-4">
+                    <form className="space-y-4" onSubmit={handleSubmit}>
                         <input
                             type="text"
                             placeholder="Name"
-                            className="w-full p-4 rounded-xl font-dm-sans text-body border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            name="name"
+                            value={form.name}
+                            onChange={handleChange}
+                            required
+                            className="w-full p-4 rounded-xl font-dm-sans text-link border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         />
                         <input
                             type="email"
                             placeholder="Email"
+                            name="email"
+                            value={form.email}
+                            onChange={handleChange}
+                            required
                             className="w-full p-4 rounded-xl font-dm-sans text-link border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         />
                         <input
                             type="tel"
                             placeholder="Phone No."
+                            name="phone"
+                            value={form.phone}
+                            onChange={handleChange}
+                            required
                             className="w-full p-4 rounded-xl font-dm-sans text-link border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                         />
-                        <input
-                            type="text"
-                            placeholder="Service Name"
-                            className="w-full p-4 rounded-xl font-dm-sans text-link border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                        />
+                        <select
+                            name="service"
+                            value={form.service}
+                            onChange={handleChange}
+                            className="w-full p-4 rounded-xl font-dm-sans text-link border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 text-bg-light"
+                            required
+                        >
+                            <option value="" className="">
+                                Select a service
+                            </option>
+                            {servicesData.map((service) => (
+                                <option
+                                    key={service.title}
+                                    value={service.title}
+                                >
+                                    {service.title}
+                                </option>
+                            ))}
+                        </select>
                         <textarea
+                            name="message"
+                            value={form.message}
+                            onChange={handleChange}
+                            required
                             placeholder="Message"
                             rows="4"
                             className="w-full p-4 rounded-xl font-dm-sans text-link border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -62,10 +130,10 @@ export default function Contact() {
                         <span className="text-sm text-gray-800 dark:text-gray-300">
                             :{" "}
                             <a
-                                href="mailto:arcanelabs@digitalsoution.com"
+                                href="mailto:arcanelabz.in@gmail.com"
                                 className="text-blue-600 text-link dark:text-bg-light underline"
                             >
-                                arcanelabs@digitalsoution.com
+                                arcanelabz.in@gmail.com
                             </a>
                         </span>
                     </div>
@@ -75,10 +143,10 @@ export default function Contact() {
                         <span className="text-sm text-gray-800  dark:text-gray-300">
                             :{" "}
                             <a
-                                href="tel:+911234567890"
+                                href="tel:+918800484530"
                                 className="text-blue-600 text-link underline dark:text-bg-light"
                             >
-                                +91 12345 67890
+                                +91 8800484530
                             </a>
                         </span>
                     </div>

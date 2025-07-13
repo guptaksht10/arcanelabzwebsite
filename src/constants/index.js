@@ -12,6 +12,7 @@ import Cloud from '../assets/images/cloud.png'
 import Custom from '../assets/images/custom.png'
 import UiUx from '../assets/images/ui-ux.png'
 import Website from '../assets/images/website.png'
+import Graphic from '../assets/images/graphic.png'
 
 export const navItems = [
     { label: 'About Us', href: '#about' },
@@ -29,22 +30,27 @@ export const servicesData = [
     },
     {
         title: "Mobile App Development for All Platforms",
-        description: "Native/Hybrid apps with powerful UX and scalable architecture.",
+        description: "We build native and hybrid apps that perform — intuitive UX meets powerful backend",
         icon: Mobile
     },
     {
         title: "Robust Backend Systems & Cloud Infrastructure",
-        description: "Native/Hybrid apps with powerful UX and scalable architecture.",
+        description: "From scalable APIs to cloud deployments, we engineer secure backend systems that grow with your business.",
         icon: Cloud
     },
     {
         title: "UI/UX Design & Prototyping",
-        description: "We craft clean, intuitive designs for seamless user experiences.",
+        description: "From wireframes to wow — we craft delightful and functional user experiences.",
         icon: UiUx
     },
     {
+        title: "Graphic Design & Brand Identity",
+        description: "We help brands stand out with visuals that speak louder than words — from logos to complete identity systems.",
+        icon: Graphic
+    },
+    {
         title: "Custom Software Solutions That Elevate Your Business",
-        description: "We develop bespoke software tailored to your requirements.",
+        description: "Tailored software solutions built around your workflows, not the other way around.",
         icon: Custom
     },
 
