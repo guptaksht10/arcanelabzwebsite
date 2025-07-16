@@ -99,20 +99,24 @@ export default function Contact() {
                                 required
                                 className="w-full p-4 rounded-xl font-dm-sans text-link border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                             />
+                            <label htmlFor="service" className="hidden">
+                                Service
+                            </label>
                             <select
                                 name="service"
                                 value={form.service}
                                 onChange={handleChange}
-                                className="w-full p-4 rounded-xl font-dm-sans text-link border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                className="w-full p-4 rounded-xl font-dm-sans text-link border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:text-bg-light"
                                 required
                             >
-                                <option value="" className="">
+                                <option value="" className="dark:text-bg-dark">
                                     Select a service
                                 </option>
                                 {servicesData.map((service) => (
                                     <option
                                         key={service.title}
                                         value={service.title}
+                                        className="dark:text-bg-dark"
                                     >
                                         {service.title}
                                     </option>

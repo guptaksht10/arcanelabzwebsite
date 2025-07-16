@@ -30,9 +30,17 @@ const ThemeToggle = () => {
     return (
         <button onClick={toggleTheme}>
             {isDarkMode ? (
-                <Sun size={20} className="rounded-full text-white" />
+                <Sun
+                    name="light mode"
+                    size={20}
+                    className="rounded-full text-white"
+                />
             ) : (
-                <Moon size={20} className=" rounded-full text-black" />
+                <Moon
+                    name="dark-mode"
+                    size={20}
+                    className=" rounded-full text-black"
+                />
             )}
         </button>
     );
