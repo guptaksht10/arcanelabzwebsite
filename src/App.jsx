@@ -6,7 +6,7 @@ import OurWork from "./components/OurWork";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-// import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const App = () => {
     return (
@@ -20,7 +20,7 @@ const App = () => {
                 <Contact />
             </div>
             <Footer />
-            {/* <Analytics /> */}
+            <SpeedInsights />
         </main>
     );
 };
