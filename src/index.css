@@ -2,21 +2,25 @@
 
 @font-face {
     font-family: "ArcaneFont";
+    font-display: auto;
     src: url("./assets/fonts/Hypebuzz.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "DmSans";
+    font-display: auto;
     src: url("./assets/fonts/DmSans.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Comfortaa";
+    font-display: auto;
     src: url("./assets/fonts/Comfortaa.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Raleway";
+    font-display: auto;
     src: url("./assets/fonts/Raleway.ttf") format("truetype");
 }
 

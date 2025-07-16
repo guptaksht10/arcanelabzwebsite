@@ -27,16 +27,28 @@ export default function Footer() {
 
                 {/* Right */}
                 <div className="flex gap-4 text-lg">
-                    <a href="#" className="hover:text-gray-200">
+                    {/* <a href="#" className="hover:text-gray-200">
                         <FaFacebookF />
-                    </a>
-                    <a href="#" className="hover:text-gray-200">
+                    </a> */}
+                    <a
+                        href="https://www.instagram.com/arcane.labz/"
+                        target="_blank"
+                        className="hover:text-gray-200"
+                    >
                         <FaInstagram />
                     </a>
-                    <a href="#" className="hover:text-gray-200">
+                    <a
+                        href="https://x.com/ArcaneLabz"
+                        target="_blank"
+                        className="hover:text-gray-200"
+                    >
                         <FaXTwitter />
                     </a>
-                    <a href="#" className="hover:text-gray-200">
+                    <a
+                        href="https://www.linkedin.com/company/arcane-labz"
+                        target="_blank"
+                        className="hover:text-gray-200"
+                    >
                         <FaLinkedinIn />
                     </a>
                 </div>
