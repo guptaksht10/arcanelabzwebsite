@@ -158,10 +158,10 @@ export default function Contact() {
                             <span className="text-sm text-gray-800 dark:text-gray-300">
                                 :{" "}
                                 <a
-                                    href="mailto:arcanelabz.in@gmail.com"
+                                    href="mailto:team@arcanelabz.in"
                                     className="text-blue-600 text-link dark:text-bg-light underline"
                                 >
-                                    arcanelabz.in@gmail.com
+                                    team@arcanelabz.in
                                 </a>
                             </span>
                         </div>
