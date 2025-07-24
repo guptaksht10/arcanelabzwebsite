@@ -7,12 +7,12 @@ import {
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-gradient-to-r from-blue-600 to-cyan-400 text-white py-6 px-4">
+        <footer className="w-full bg-nav text-white py-6 px-4">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
                 {/* Left */}
                 <p className="text-sm">&copy; 2025 All rights reserved.</p>
 
-                {/* Center */}
+                {/* Center
                 <div className="flex flex-wrap gap-6 text-sm justify-center">
                     <a href="#" className="hover:underline">
                         Privacy Policy
@@ -23,7 +23,7 @@ export default function Footer() {
                     <a href="#" className="hover:underline">
                         Cookies Settings
                     </a>
-                </div>
+                </div> */}
 
                 {/* Right */}
                 <div className="flex gap-4 text-lg">

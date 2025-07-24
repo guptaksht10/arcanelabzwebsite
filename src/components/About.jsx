@@ -5,18 +5,18 @@ const About = () => {
     return (
         <section
             id="about"
-            className="relative w-full min-h-[500px] md:min-h-[600px] lg:min-h-[750px] flex items-center justify-center overflow-hidden rounded-4xl border border-btn-gradient-end mt-15"
+            className="relative w-full min-h-[500px] md:min-h-[600px] lg:min-h-[750px] flex items-center justify-center overflow-hidden rounded-4xl shadow-sm shadow-btn-gradient-end mt-15"
         >
             {/* Background Image */}
             <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${AboutImg_3})` }}
             >
-                <div className="absolute inset-0  backdrop-blur-[5px]" />
+                <div className="absolute inset-0  backdrop-blur-[10px]" />
             </div>
 
             {/* Centered Content */}
-            <div className="relative z-10 px-4 py-12 sm:py-20 text-center text-gray-900 max-w-3xl">
+            <div className="relative z-10 px-4 py-12 sm:py-20 text-center text-white max-w-3xl">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-dm-sans mb-6 leading-tight">
                     Who We Are?
                 </h2>

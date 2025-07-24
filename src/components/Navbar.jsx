@@ -8,18 +8,18 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="sticky top-0 z-50 backdrop-blur-lg bg-white/70 dark:bg-bg-dark/70 py-3 border-b border-gray-200 dark:border-gray-700">
+        <nav className="sticky top-0 z-50 backdrop-blur-lg bg-nav/70 py-3 border-b border-gray-700">
             <div className="max-w-7xl mx-auto px-5 flex items-center justify-between">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2">
                     <img src={Logo} className="w-12 h-12" alt="logo" />
-                    <span className="font-arcane sm:text-2xl lg:text-logo dark:text-white">
+                    <span className="font-arcane sm:text-2xl lg:text-logo text-white">
                         ARCANE LABZ
                     </span>
                 </a>
 
                 {/* Desktop nav */}
-                <ul className="hidden lg:flex items-center gap-10 font-dm-sans font-semibold text-link dark:text-white">
+                <ul className="hidden lg:flex items-center gap-10 font-dm-sans font-semibold text-link text-white">
                     {navItems.map((item) => (
                         <li
                             key={item.label}
@@ -28,15 +28,15 @@ const Navbar = () => {
                             <a href={item.href}>{item.label}</a>
                         </li>
                     ))}
-                    <ThemeToggle />
+                    {/* <ThemeToggle /> */}
                 </ul>
 
                 {/* Mobile menu toggle */}
                 <div className="lg:hidden flex items-center gap-4">
-                    <ThemeToggle />
+                    {/* <ThemeToggle /> */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="text-2xl text-gray-800 dark:text-white"
+                        className="text-2xl text-white"
                     >
                         {isOpen ? <HiX /> : <HiMenu />}
                     </button>
@@ -45,12 +45,12 @@ const Navbar = () => {
 
             {/* Mobile nav menu */}
             {isOpen && (
-                <div className="md:hidden px-5 pt-4 pb-6 space-y-4 bg-white dark:bg-bg-dark shadow-lg rounded-b-xl">
+                <div className="md:hidden px-5 pt-4 pb-6 space-y-4 bg-bg-dark shadow-lg rounded-b-xl">
                     {navItems.map((item) => (
                         <a
                             key={item.label}
                             href={item.href}
-                            className="block text-base font-medium font-dm-sans text-gray-800 dark:text-white hover:text-btn-gradient-start transition"
+                            className="block text-base font-medium font-dm-sans text-white hover:text-btn-gradient-start transition"
                         >
                             {item.label}
                         </a>

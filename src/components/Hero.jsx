@@ -6,13 +6,13 @@ const Hero = () => {
             <section className="flex flex-col md:flex-row items-center justify-between gap-10 py-12">
                 {/* Text Section */}
                 <div className="flex-1 text-left">
-                    <h2 className="font-raleway text-body font-bold mb-2">
+                    <h2 className="font-raleway text-white text-body font-bold mb-2">
                         ARCANE LABZ
                     </h2>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-dm-sans font-semibold mb-4">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl text-white leading-tight font-dm-sans font-semibold mb-4">
                         Innovate. Escape Mediocrity
                     </h1>
-                    <p className="text-base text-gray-700 dark:text-gray-300 max-w-xl font-dm-sans mb-6">
+                    <p className="text-base text-white dark:text-gray-300 max-w-xl font-dm-sans mb-6">
                         We design and engineer digital solutions that challenge
                         the norm — bold ideas turned into scalable apps,
                         websites, and cloud systems.
@@ -27,7 +27,7 @@ const Hero = () => {
 
                 {/* Image */}
                 <div className="flex-1 w-full max-w-xl mx-auto md:mx-0">
-                    <div className="rounded-3xl overflow-hidden shadow-md shadow-btn-gradient-end">
+                    <div className="rounded-3xl overflow-hidden shadow-sm shadow-btn-gradient-end">
                         <img
                             className="w-full h-auto object-cover"
                             src={HeroImg}
@@ -38,7 +38,7 @@ const Hero = () => {
             </section>
 
             {/* Bottom paragraph */}
-            <p className="text-center font-raleway text-base text-gray-800 dark:text-gray-300 px-4 max-w-3xl mx-auto">
+            <p className="text-center font-raleway text-base text-white dark:text-gray-300 px-4 max-w-3xl mx-auto">
                 At Arcane Labz, we don't just build apps — we craft digital
                 experiences that disrupt convention and elevate user engagement.
             </p>

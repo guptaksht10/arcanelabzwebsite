@@ -10,7 +10,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const App = () => {
     return (
-        <main className="bg-white dark:bg-bg-dark">
+        <main className="bg-bg-dark">
             <Navbar />
             <div className="max-w-7xl mx-auto pt-5 px-6 dark:text-white">
                 <Hero />
