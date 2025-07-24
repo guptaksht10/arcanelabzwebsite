@@ -26,15 +26,16 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
+@theme {   
     --color-bg-light: #d9d9d9;
-    --color-bg-dark: #2a2c39;
+    --color-bg-dark: #121212;
+    --color-nav: #141414;
 
     --color-text-light: #111111;
     --color-text-dark: #ffffff;
 
-    --color-btn-gradient-start: #3965c8;
-    --color-btn-gradient-end: #4dc5f7;
+    --color-btn-gradient-start: #2379DC;
+    --color-btn-gradient-end: #1D3FE9;
 
     --color-border-gradient-start: #d9d9d9;
     --color-border-gradient-end: #4dc5f7;

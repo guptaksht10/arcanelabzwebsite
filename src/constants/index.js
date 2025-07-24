@@ -1,9 +1,10 @@
 import Logo from "../assets/images/image.png";
-import HeroImg from "../assets/images/Hero-img.avif";
-import AboutImg_3 from "../assets/images/about-3-img.avif";
+import HeroImg from "../assets/images/Hero-img.png";
+import AboutImg_3 from "../assets/images/about-3-img.png";
 import ComingSoon_1 from "../assets/images/ComingSoon-1.avif";
 import ComingSoon_3 from "../assets/images/ComingSoon-3.avif";
 import ComingSoon_4 from "../assets/images/ComingSoon-4.avif";
+import Workspace from "../assets/images/workspace.png";
 import Mobile from "../assets/images/mobile.png";
 import Cloud from "../assets/images/cloud.png";
 import Custom from "../assets/images/custom.png";
@@ -57,4 +58,12 @@ export const servicesData = [
     },
 ];
 
-export { Logo, HeroImg, AboutImg_3, ComingSoon_1, ComingSoon_3, ComingSoon_4 };
+export {
+    Logo,
+    HeroImg,
+    AboutImg_3,
+    ComingSoon_1,
+    Workspace,
+    ComingSoon_3,
+    ComingSoon_4,
+};
