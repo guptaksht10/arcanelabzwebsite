@@ -130,7 +130,7 @@ export default function Contact() {
                                         <option
                                             key={service.title}
                                             value={service.title}
-                                            className="text-black"
+                                            className="text-white"
                                         >
                                             {service.title}
                                         </option>
