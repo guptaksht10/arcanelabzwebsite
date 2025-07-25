@@ -5,6 +5,7 @@ import {
     ComingSoon_3,
     ComingSoon_4,
 } from "../constants";
+import { Link } from "react-router-dom";
 
 const OurWork = () => {
     return (
@@ -27,12 +28,12 @@ const OurWork = () => {
                 <p className="text-base sm:text-lg font-semibold text-white mb-6 font-dm-sans">
                     Got a project you’d like to see here?
                 </p>
-                <a
-                    href="#contact"
+                <Link
+                    to="/workspace"
                     className="w-full sm:w-fit px-6 py-3 text-center rounded-xl bg-gradient-to-r from-btn-gradient-start to-btn-gradient-end text-white font-raleway font-semibold block"
                 >
                     Visit Workspace
-                </a>
+                </Link>
             </div>
 
             {/* Workspace Image Grid (Single Image) */}

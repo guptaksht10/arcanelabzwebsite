@@ -12,11 +12,17 @@ import UiUx from "../assets/images/ui-ux.png";
 import Website from "../assets/images/website.png";
 import Graphic from "../assets/images/graphic.png";
 
+import threeDImage from "../assets/images/3d.png";
+import mobileDev from "../assets/images/mobile-app.png";
+import graphicDesign from "../assets/images/graphic-design.png";
+import Branding from "../assets/images/Branding.png";
+import websiteDev from "../assets/images/website-design.png";
+
 export const navItems = [
-    { label: "About Us", href: "#about" },
-    { label: "Our Work", href: "#our-work" },
-    { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: "About Us", href: "about" },
+    { label: "Our Work", href: "our-work" },
+    { label: "Services", href: "services" },
+    { label: "Contact", href: "contact" },
 ];
 
 export const servicesData = [
@@ -55,6 +61,33 @@ export const servicesData = [
         description:
             "Tailored software solutions built around your workflows, not the other way around.",
         icon: Custom,
+    },
+];
+
+export const workspaceData = [
+    {
+        title: "Mobile Applications",
+        image: mobileDev,
+    },
+    {
+        title: "Websites & more.",
+        image: websiteDev,
+    },
+    {
+        title: "Branding",
+        image: Branding,
+    },
+    {
+        title: "Graphic Designing",
+        image: graphicDesign,
+    },
+    {
+        title: "3D Website Designs",
+        image: threeDImage,
+    },
+    {
+        title: "UI/UX Design & Prototyping",
+        image: mobileDev,
     },
 ];
 
