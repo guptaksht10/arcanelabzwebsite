@@ -28,12 +28,12 @@ const OurWork = () => {
                 <p className="text-base sm:text-lg font-semibold text-white mb-6 font-dm-sans">
                     Got a project you’d like to see here?
                 </p>
-                <Link
+                <span
                     to="/workspace"
-                    className="w-full sm:w-fit px-6 py-3 text-center rounded-xl bg-gradient-to-r from-btn-gradient-start to-btn-gradient-end text-white font-raleway font-semibold block"
+                    className="w-full sm:w-fit px-6 py-3 text-center rounded-xl bg-gray-500 text-white font-raleway font-semibold block cursor-not-allowed"
                 >
                     Visit Workspace
-                </Link>
+                </span>
             </div>
 
             {/* Workspace Image Grid (Single Image) */}
