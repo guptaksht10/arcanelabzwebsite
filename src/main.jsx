@@ -10,6 +10,7 @@ createRoot(document.getElementById("root")).render(
     <StrictMode>
         <BrowserRouter>
             <Routes>
+                <Analytics />
                 <Route path="/" element={<App />} />
                 <Route path="/workspace" element={<WorkspacePage />} />
             </Routes>

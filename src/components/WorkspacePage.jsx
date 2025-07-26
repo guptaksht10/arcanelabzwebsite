@@ -17,9 +17,9 @@ const WorkspacePage = () => {
                 {/* Header Section with Spline Background */}
                 <section className="relative w-full h-[90vh] overflow-hidden">
                     {/* Spline Background */}
-                    <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 z-5 pointer-events-auto">
                         <iframe
-                            src="https://my.spline.design/your-scene-id/"
+                            src="https://my.spline.design/untitled-HAtvtahD4EPyDs4nKay65ZBx/"
                             frameBorder="0"
                             width="100%"
                             height="100%"
@@ -29,7 +29,7 @@ const WorkspacePage = () => {
                     </div>
 
                     {/* Left-Aligned Content */}
-                    <div className="relative z-10 h-full flex items-center px-4 sm:px-16 bg-black/40">
+                    <div className="relative z-5 h-full flex items-center px-4 sm:px-16 bg-black/40">
                         <div className="max-w-xl">
                             <h1 className="text-5xl sm:text-heading text-white mb-6 font-arcane">
                                 Work Space
