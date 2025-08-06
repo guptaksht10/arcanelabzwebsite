@@ -192,10 +192,10 @@ export default function Contact() {
                             <span className="text-sm   dark:text-gray-300">
                                 :{" "}
                                 <a
-                                    href="tel:+918800484530"
+                                    href="tel:+917217689599"
                                     className=" text-link underline dark:text-bg-light"
                                 >
-                                    +91 8800484530
+                                    +91 7217689599
                                 </a>
                             </span>
                         </div>
