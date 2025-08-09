@@ -1,51 +1,81 @@
-import React from "react";
-import {
-    ComingSoon_1,
-    Workspace,
-    ComingSoon_3,
-    ComingSoon_4,
-} from "../constants";
-import { Link } from "react-router-dom";
-
-const OurWork = () => {
+const projects = [
+    {
+      id: 1,
+      title: "Our Website Redesign",
+      category: "UI/UX Design",
+      description:
+        "Complete website redesign for a bold look and escaping mediocrity. New style more elegant, more smoothness while scrolling, and a better UI/UX.",
+      image: "/src/assets/images/project1.png", // replace with your actual image
+      link: "#",
+    },
+    {
+      id: 2,
+      title: "Versa Website",
+      category: "UI/UX Design",
+      description:
+        "Complete website redesign for a bold look and escaping mediocrity. New style more elegant, more smoothness while scrolling, and a better UI/UX.",
+      image: "/src/assets/images/project2.png", // replace with your actual image
+      link: "#",
+    },
+    {
+      id: 3,
+      title: "Bonita App",
+      category: "UI/UX Design",
+      description:
+        "Complete website redesign for a bold look and escaping mediocrity. New style more elegant, more smoothness while scrolling, and a better UI/UX.",
+      image: "/src/assets/images/project3.png", // replace with your actual image
+      link: "#",
+    },
+  ];
+  
+  const OurWork = () => {
     return (
-        <section
-            id="our-work"
-            className="min-h-screen flex flex-col lg:flex-row items-center justify-between gap-10 px-4 sm:px-8 py-10"
-        >
-            {/* Text Block */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center h-full">
-                <h2 className="font-raleway text-sm text-white font-bold mb-2 uppercase">
-                    ARCANE LABZ WORKSPACE
-                </h2>
-                <h1 className="text-3xl sm:text-4xl font-dm-sans text-white font-semibold mb-4 leading-tight">
-                    Our Work Speaks
-                </h1>
-                <p className="text-base sm:text-lg text-white dark:text-gray-300 mb-3 font-dm-sans">
-                    We create digital experiences that are beautiful, usable,
-                    and deeply functional. Here's a glimpse of our recent work.
-                </p>
-                <p className="text-base sm:text-lg font-semibold text-white mb-6 font-dm-sans">
-                    Got a project you’d like to see here?
-                </p>
-                <span
-                    to="/workspace"
-                    className="w-full sm:w-fit px-6 py-3 text-center rounded-xl bg-gray-500 text-white font-raleway font-semibold block cursor-not-allowed"
-                >
-                    Visit Workspace
+      <section className="bg-black py-20 px-6 sm:px-12">
+        {/* Title */}
+        <h2 className="text-white text-6xl font-bold mb-12 font-dm-sans">
+          Our Work
+        </h2>
+  
+        {/* Project Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="bg-gradient-to-b from-gray-700 to-gray-800 rounded-2xl overflow-hidden shadow-lg flex flex-col"
+            >
+              {/* Image */}
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full object-cover"
+              />
+  
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1">
+                <span className="inline-block bg-green-200 text-green-900 text-sm font-semibold px-3 py-1 rounded-full mb-4">
+                  {project.category}
                 </span>
+  
+                <h3 className="text-white text-2xl font-bold mb-3">
+                  {project.title}
+                </h3>
+                <p className="text-gray-300 text-base flex-1">
+                  {project.description}
+                </p>
+  
+                <a
+                  href={project.link}
+                  className="mt-6 text-white font-semibold inline-flex items-center gap-2 hover:underline"
+                >
+                  View Project →
+                </a>
+              </div>
             </div>
-
-            {/* Workspace Image Grid (Single Image) */}
-            <div className="w-full lg:w-1/2 flex justify-center">
-                <img
-                    src={Workspace}
-                    alt="Workspace Grid"
-                    className="max-w-full h-auto rounded-3xl"
-                />
-            </div>
-        </section>
+          ))}
+        </div>
+      </section>
     );
-};
-
-export default OurWork;
+  };
+  
+  export default OurWork;
+  

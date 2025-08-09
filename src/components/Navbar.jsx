@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Logo } from "../constants";
+import Logo from "../assets/images/logo.png";
 import { navItems } from "../constants";
 import ThemeToggle from "./ThemeToggle";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -26,8 +26,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="sticky top-0 z-50 backdrop-blur-lg bg-nav/70 py-3 border-b border-gray-700">
-            <div className="max-w-7xl mx-auto px-5 flex items-center justify-between">
+        <nav className="fixed top-0 z-50 py-3 bg-transparent w-full">
+            <div className="px-16 py-3 flex items-center justify-between">
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-2">
                     <img src={Logo} className="w-12 h-12" alt="logo" />
@@ -37,7 +37,7 @@ const Navbar = () => {
                 </a>
 
                 {/* Desktop nav */}
-                <ul className="hidden lg:flex items-center gap-10 font-dm-sans font-semibold text-link text-white">
+                <ul className="hidden lg:flex items-center gap-25 font-dm-sans font-semibold text-link text-white">
                     {navItems.map((item) => (
                         <li
                             key={item.label}
@@ -64,7 +64,7 @@ const Navbar = () => {
 
             {/* Mobile nav menu */}
             {isOpen && (
-                <div className="md:hidden px-5 pt-4 pb-6 space-y-4 bg-bg-dark shadow-lg rounded-b-xl">
+                <div className="px-5 pt-4 pb-6 space-y-4 bg-bg-dark shadow-lg rounded-b-xl">
                     {navItems.map((item) => (
                         <button
                             key={item.label}

@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
+import WhyUs from "./components/WhyUs";
+import WhatweDo from "./components/WhatweDo";
 import OurWork from "./components/OurWork";
-import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useLocation } from "react-router-dom";
+import ContactUs from "./components/ContactUs";
 
 const App = () => {
     const location = useLocation();
@@ -29,14 +30,11 @@ const App = () => {
     return (
         <main className="bg-bg-dark">
             <Navbar />
-            <div className="max-w-7xl mx-auto pt-5 px-6 dark:text-white">
-                <Hero />
-                <About />
-                <OurWork />
-                <Services />
-                <Contact />
-            </div>
-            <Footer />
+            <Hero />
+            <WhyUs />
+            <WhatweDo />
+            <OurWork />
+            <ContactUs/>
             <SpeedInsights />
         </main>
     );

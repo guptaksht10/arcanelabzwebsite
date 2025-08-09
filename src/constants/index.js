@@ -19,10 +19,9 @@ import Branding from "../assets/images/Branding.png";
 import websiteDev from "../assets/images/website-design.png";
 
 export const navItems = [
-    { label: "About Us", href: "about" },
-    { label: "Our Work", href: "our-work" },
     { label: "Services", href: "services" },
     { label: "Contact", href: "contact" },
+    { label: "About Us", href: "about" },
 ];
 
 export const servicesData = [
