@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import Logo from "../assets/images/logo.png";
-import { navItems } from "../constants";
 import ThemeToggle from "./ThemeToggle";
 import { HiMenu, HiX } from "react-icons/hi";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion"; // Import motion
+
+const navItems = [
+    { label: "Services", href: "whatweDo" },
+    { label: "Contact", href: "contact" },
+    { label: "About Us", href: "whyus" }, // Correct link for "Why Us?"
+];
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +32,13 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="fixed top-0 z-50 py-3 bg-transparent w-full">
+        // Animate the main nav container to fade in on load
+        <motion.nav 
+            className="fixed top-0 z-50 py-3 bg-transparent w-full"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className="px-16 py-3 flex items-center justify-between">
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-2">
@@ -47,12 +59,10 @@ const Navbar = () => {
                             {item.label}
                         </li>
                     ))}
-                    {/* <ThemeToggle /> */}
                 </ul>
 
                 {/* Mobile menu toggle */}
                 <div className="lg:hidden flex items-center gap-4">
-                    {/* <ThemeToggle /> */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="text-2xl text-white"
@@ -62,9 +72,15 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile nav menu */}
+            {/* Mobile nav menu with slide-down and fade-in animation */}
             {isOpen && (
-                <div className="px-5 pt-4 pb-6 space-y-4 bg-bg-dark shadow-lg rounded-b-xl">
+                <motion.div
+                    className="px-5 pt-4 pb-6 space-y-4 bg-bg-dark shadow-lg rounded-b-xl lg:hidden"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }} // Use AnimatePresence for exit animations
+                    transition={{ duration: 0.3 }}
+                >
                     {navItems.map((item) => (
                         <button
                             key={item.label}
@@ -74,9 +90,9 @@ const Navbar = () => {
                             {item.label}
                         </button>
                     ))}
-                </div>
+                </motion.div>
             )}
-        </nav>
+        </motion.nav>
     );
 };
 

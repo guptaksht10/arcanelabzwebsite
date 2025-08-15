@@ -1,4 +1,7 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import WhyUs from "./components/WhyUs";
@@ -7,8 +10,6 @@ import OurWork from "./components/OurWork";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { useLocation } from "react-router-dom";
-import ContactUs from "./components/ContactUs";
 
 const App = () => {
     const location = useLocation();
@@ -18,25 +19,27 @@ const App = () => {
         const section = params.get("scrollTo");
 
         if (section) {
+            // A more reliable way to scroll after the DOM is ready
             const target = document.getElementById(section);
             if (target) {
-                setTimeout(() => {
-                    target.scrollIntoView({ behavior: "smooth" });
-                }, 100); // delay to wait for components to mount
+                target.scrollIntoView({ behavior: "smooth" });
             }
         }
     }, [location]);
 
     return (
-        <main className="bg-bg-dark">
-            <Navbar />
-            <Hero />
-            <WhyUs />
-            <WhatweDo />
-            <OurWork />
-            <ContactUs/>
-            <SpeedInsights />
-        </main>
+        <AnimatePresence mode="wait">
+            <main className="bg-black">
+                <Navbar />
+                <Hero />
+                <WhyUs />
+                <WhatweDo />
+                <OurWork />
+                <Contact />
+                <Footer />
+                {/* <SpeedInsights /> */}
+            </main>
+        </AnimatePresence>
     );
 };
 
